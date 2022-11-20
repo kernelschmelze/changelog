@@ -1,13 +1,21 @@
-### changelog
+# Changelog
 
 Changelog converts the git commit history into a simple json format.  
 
-### usage
+## Install
+
+```bash
+git clone https://github.com/kernelschmelze/changelog.git
+cd changelog
+go build
+```
+
+## Usage
 
 `./changelog [path to repo]`
 
 
-### output
+## Output
 
 ``` json
 [
