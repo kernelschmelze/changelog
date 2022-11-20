@@ -48,3 +48,21 @@ go build
   }
 ]
 ```  
+
+## Hugo use case
+
+`changelog . > ./data/_changelog.json`
+
+``` html
+{{ range $.Site.Data._changelog }}
+  <ul class="history">
+  <li>{{ time.Format "2006-01-02 15:04:05 Z07:00" .Time }}</li>
+  <li>{{ .Message }}</li>
+    <ul>
+      {{ range .ChangedFiles}}
+      <li>{{ . }}</li>
+      {{ end}}
+    </ul>
+  </ul>
+{{ end }}
+```
